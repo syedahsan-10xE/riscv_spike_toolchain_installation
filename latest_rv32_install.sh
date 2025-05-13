@@ -13,10 +13,12 @@ echo
 
 # Step 1: Install dependencies
 echo "[1/4] Installing required packages..."
-sudo apt update
-sudo apt install -y git build-essential autoconf automake libtool \
-    pkg-config libmpc-dev libmpfr-dev libgmp-dev gawk bison flex \
-    texinfo gperf libusb-1.0-0-dev device-tree-compiler zlib1g-dev
+sudo apt update && sudo apt install -y \
+  autoconf automake autotools-dev build-essential bison flex \
+  libexpat-dev libgmp-dev libglib2.0-dev libmpc-dev libmpfr-dev \
+  libtool libusb-1.0-0-dev patchutils python3 python3-pip \
+  texinfo gawk gperf zlib1g-dev curl git bc
+
 
 # Step 2: Prepare environment
 echo
